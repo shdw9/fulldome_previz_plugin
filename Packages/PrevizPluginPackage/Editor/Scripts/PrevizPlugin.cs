@@ -12,7 +12,6 @@ using UnityEditor.PackageManager;
 
 using Unity.Formats.USD;
 
-
 public class PrevizPlugin : MonoBehaviour
 {
     // modified version of MenuImportAsGameObjects()
