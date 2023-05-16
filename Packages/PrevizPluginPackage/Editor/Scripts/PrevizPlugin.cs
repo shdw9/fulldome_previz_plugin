@@ -56,4 +56,22 @@ public class PrevizPlugin : MonoBehaviour
         window.Show();
         window.Focus();
     }
+
+    [MenuItem("USD/Previzualization Panels/Animation Window", priority = 160)]
+    public static void AnimatorWindow()
+    {
+        System.Type windowType = typeof(UnityEditor.Editor).Assembly.GetType("UnityEditor.AnimationWindow");
+        EditorWindow window = EditorWindow.GetWindow(windowType);
+        window.Show();
+        window.Focus();
+    }
+
+    [MenuItem("USD/Previzualization Panels/USD Recorder Window", priority = 190)]
+    public static void RecorderWindow()
+    {
+        EditorWindow window = EditorWindow.GetWindow(typeof(UnityEditor.Recorder.RecorderWindow));
+        window.Show();
+        window.Focus();
+    }
+
 }

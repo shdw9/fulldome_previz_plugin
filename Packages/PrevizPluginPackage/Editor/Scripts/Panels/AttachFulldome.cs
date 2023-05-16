@@ -15,7 +15,7 @@ using Unity.Formats.USD;
 public class AttachFulldome : EditorWindow
 {
 
-    [MenuItem("USD/Panels/FullDome View", priority = 150)]
+    [MenuItem("USD/Previzualization Panels/FullDome View", priority = 120)]
     public static void FullDomeView()
     {
         // This method is called when the user selects the menu item in the Editor
@@ -23,7 +23,8 @@ public class AttachFulldome : EditorWindow
         wnd.titleContent = new GUIContent("Fulldome View");
     }
 
-    public void CreateGUI() {
+    void CreateGUI() {
+        Debug.Log("fdv!");
         rootVisualElement.Add(new Label("Hello"));
     }
 
