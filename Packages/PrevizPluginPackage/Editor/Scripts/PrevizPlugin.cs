@@ -14,6 +14,8 @@ using Unity.Formats.USD;
 
 public class PrevizPlugin : MonoBehaviour
 {
+    public static GameObject usdScene;
+
     // modified version of MenuImportAsGameObjects()
     // from com.unity.formats.usd/Editor/Scripts/Behaviors/UsdMenu.cs
     [MenuItem("USD/Import with Timeline Clip", priority = 4)]
@@ -30,7 +32,7 @@ public class PrevizPlugin : MonoBehaviour
         scene.Close();
 
         // create timeline and playable director
-        var usdScene = GameObject.Find(usd.name);
+        usdScene = GameObject.Find(usd.name);
         var timeline = ScriptableObject.CreateInstance<TimelineAsset>();
         usdScene.AddComponent<PlayableDirector>();
         usdScene.GetComponent<PlayableDirector>().playableAsset = timeline;

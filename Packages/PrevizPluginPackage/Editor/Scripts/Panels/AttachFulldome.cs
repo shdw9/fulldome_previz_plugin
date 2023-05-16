@@ -16,22 +16,29 @@ public class AttachFulldome : EditorWindow
 {
 
     public static DropdownField m_dropDown;
+    public static DropdownField m_orientationDropdown;
 
-    [MenuItem("USD/Previzualization Panels/FullDome View", priority = 120)]
+    [MenuItem("USD/Previzualization Panels/Fulldome Camera", priority = 120)]
     public static void FullDomeView()
     {
         EditorWindow wnd = GetWindow<AttachFulldome>();
-        wnd.titleContent = new GUIContent("Fulldome View");
+        wnd.titleContent = new GUIContent("[Previz] Fulldome Camera");
 
         // this makes it so that its not resizable
-        wnd.minSize = new Vector2(300,400);
-        wnd.maxSize = new Vector2(300,400);
+        wnd.minSize = new Vector2(300,200);
+        wnd.maxSize = new Vector2(300,200);
+
+        wnd.ShowPopup();
     }
 
     void CreateGUI() {
-        Debug.Log("fdv!");
         m_dropDown = new DropdownField();
         List<string> listOfCameras = new List<string>();
+
+        m_orientationDropdown = new DropdownField();
+        var orientationOptions = new List<string>();
+        orientationOptions.Add("Fisheye");
+        orientationOptions.Add("Fulldome");
 
         foreach (Camera cam in FindObjectsOfType<Camera>())
         {
@@ -40,18 +47,23 @@ public class AttachFulldome : EditorWindow
         }
         
         m_dropDown.choices = listOfCameras;
+        m_orientationDropdown.choices = orientationOptions;
 
         rootVisualElement.Add(new Label("\nSelect a camera to modify the fulldome camera:"));
         rootVisualElement.Add(m_dropDown);
+
+        rootVisualElement.Add(new Label("\nFulldome Camera Orientation:"));
+        rootVisualElement.Add(m_orientationDropdown);
+        m_orientationDropdown.value = "Fisheye";
         rootVisualElement.Add(new Label(""));
 
         var addButton = new Button();
-        addButton.text = "Add Fulldome Rig";
+        addButton.text = "Add Fulldome Script";
         addButton.clicked += addFulldome;
         rootVisualElement.Add(addButton);
 
         var removeButton = new Button();
-        removeButton.text = "Remove Fulldome Rig";
+        removeButton.text = "Remove Fulldome Script";
         removeButton.clicked += removeFulldome;
         rootVisualElement.Add(removeButton);
 
@@ -77,11 +89,18 @@ public class AttachFulldome : EditorWindow
 
         foreach (Camera cam in FindObjectsOfType<Camera>())
         {
-            Debug.Log(cam.name);
             if (cam.name == m_dropDown.value)
             {
                 gameobj.GetComponent<Avante.FulldomeCamera>().mainCamera = cam;
+
+                if (m_orientationDropdown.value == "Fisheye") {
+                    gameobj.GetComponent<Avante.FulldomeCamera>().orientation = Avante.Orientation.Fisheye;
+                } else {
+                    gameobj.GetComponent<Avante.FulldomeCamera>().orientation = Avante.Orientation.Fulldome;
+                }
+
             }
+            GameObject.Find(m_dropDown.value).GetComponent<Camera>().enabled = false;
         }
 
         gameobj.GetComponent<Avante.FulldomeCamera>().masked = true;
