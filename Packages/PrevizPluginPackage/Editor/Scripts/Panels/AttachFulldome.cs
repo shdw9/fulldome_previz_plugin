@@ -49,10 +49,10 @@ public class AttachFulldome : EditorWindow
         m_dropDown.choices = listOfCameras;
         m_orientationDropdown.choices = orientationOptions;
 
-        rootVisualElement.Add(new Label("\nSelect a camera to modify the fulldome camera:"));
+        rootVisualElement.Add(new Label("\n Select a camera to modify the fulldome camera:"));
         rootVisualElement.Add(m_dropDown);
 
-        rootVisualElement.Add(new Label("\nFulldome Camera Orientation:"));
+        rootVisualElement.Add(new Label("\n Fulldome Camera Orientation:"));
         rootVisualElement.Add(m_orientationDropdown);
         m_orientationDropdown.value = "Fisheye";
         rootVisualElement.Add(new Label(""));
