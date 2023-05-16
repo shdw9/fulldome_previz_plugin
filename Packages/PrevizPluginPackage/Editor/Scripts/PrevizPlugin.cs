@@ -45,7 +45,7 @@ public class PrevizPlugin : MonoBehaviour
         usdPlayableAsset.SourceUsdAsset = new ExposedReference<UsdAsset> { exposedName = Guid.NewGuid().ToString() };
         usdScene.GetComponent<PlayableDirector>().SetReferenceValue(usdPlayableAsset.SourceUsdAsset.exposedName, usdScene.GetComponent<UsdAsset>());
 
-        Debug.Log("[PREVIZPLUGIN] Successfully imported" + usd.name + " with a timeline clip length of " + usdPlayableClip.duration + " seconds");
+        Debug.Log("[PREVIZ] Successfully imported" + usd.name + " with a timeline clip length of " + usdPlayableClip.duration + " seconds");
     }
 
     [MenuItem("USD/Export Scene with Unity Recorder", priority = 50)]
