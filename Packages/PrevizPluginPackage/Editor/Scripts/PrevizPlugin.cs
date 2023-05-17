@@ -1,21 +1,26 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.IO;
 using System;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
 
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.Playables;
 using UnityEngine.Timeline;
+using UnityEditor.PackageManager;
 
 using Unity.Formats.USD;
 
-public class PrevizPanel : EditorWindow
+public class PrevizPlugin : MonoBehaviour
 {
+    public static GameObject usdScene;
 
     // modified version of MenuImportAsGameObjects()
     // from com.unity.formats.usd/Editor/Scripts/Behaviors/UsdMenu.cs
-    [MenuItem("USD/Import as GameObjects with Timeline", priority = 0)]
+    [MenuItem("USD/Import with Timeline Clip", priority = 4)]
     public static void ImportWithTimeline()
     {
         // import usd file
@@ -29,7 +34,7 @@ public class PrevizPanel : EditorWindow
         scene.Close();
 
         // create timeline and playable director
-        var usdScene = GameObject.Find(usd.name);
+        usdScene = GameObject.Find(usd.name);
         var timeline = ScriptableObject.CreateInstance<TimelineAsset>();
         usdScene.AddComponent<PlayableDirector>();
         usdScene.GetComponent<PlayableDirector>().playableAsset = timeline;
@@ -44,10 +49,10 @@ public class PrevizPanel : EditorWindow
         usdPlayableAsset.SourceUsdAsset = new ExposedReference<UsdAsset> { exposedName = Guid.NewGuid().ToString() };
         usdScene.GetComponent<PlayableDirector>().SetReferenceValue(usdPlayableAsset.SourceUsdAsset.exposedName, usdScene.GetComponent<UsdAsset>());
 
-        Debug.Log("Successfully imported" + usd.name + " with a timeline clip length of " + usdPlayableClip.duration + " seconds");
+        Debug.Log("[PREVIZ] Successfully imported" + usd.name + " with a timeline clip length of " + usdPlayableClip.duration + " seconds");
     }
 
-    [MenuItem("USD/Export USD with Recorder", priority = 50)]
+    [MenuItem("USD/Export Scene with Unity Recorder", priority = 50)]
     public static void OpenRecorderWindow()
     {
         // Open the Unity Recorder Window To Export USD
@@ -56,23 +61,23 @@ public class PrevizPanel : EditorWindow
         window.Focus();
     }
 
-    [MenuItem("USD/Open PrevizPanel", priority = 150)]
-    public static void ShowMyEditor()
+    [MenuItem("USD/Previzualization Panels/Animation Window", priority = 160)]
+    public static void AnimatorWindow()
     {
-        // This method is called when the user selects the menu item in the Editor
-        EditorWindow wnd = GetWindow<PrevizPanel>();
-        wnd.titleContent = new GUIContent("test");
+        System.Type windowType = typeof(UnityEditor.Editor).Assembly.GetType("UnityEditor.AnimationWindow");
+        EditorWindow window = EditorWindow.GetWindow(windowType);
+        window.Show();
+        window.Focus();
     }
 
-    // Start is called before the first frame update
-    void Start()
+    [MenuItem("USD/Previzualization Panels/USD Recorder Window", priority = 190)]
+    public static void RecorderWindow()
     {
-        
+        EditorWindow window = EditorWindow.GetWindow(typeof(UnityEditor.Recorder.RecorderWindow));
+        window.Show();
+        window.Focus();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
+
 }
