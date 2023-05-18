@@ -32,7 +32,7 @@ public class ExportTimeline : MonoBehaviour
             timelineJson += "\"" + track.ToString().Split('(', ')')[1] + "\": {";
             timelineJson += "\"trackName\": \"" + track.name + "\", ";
 
-            timelineJson += "\"trackInfo\": ";
+            timelineJson += "\"clipInfo\": ";
             timelineJson += JsonUtility.ToJson(track);
 
             timelineJson += "}}";
