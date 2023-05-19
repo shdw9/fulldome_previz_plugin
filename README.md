@@ -35,4 +35,6 @@ For a more detailed guide, see [installation docs](https://github.com/shdw9/full
 
 ## Credits
 
+*Made from our standalone version which was discontinued, [fulldome_previz_unity](https://github.com/shdw9/fulldome_previz_unity)*
+
 *SFSU CSC 631 (Spring 2023) Team 3B - Clark-Kent Victa, Austin Nguyen, Joshua Del Rosario*
