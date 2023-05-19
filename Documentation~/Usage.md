@@ -1,4 +1,4 @@
-# Fulldome Previzualiation: Usage Documentation
+# Fulldome Previsualiation: Usage Documentation
 For documentation regarding the fulldome camera, see [fulldome docs](https://github.com/shdw9/fulldome_previz_plugin/blob/main/Documentation~/Fulldome.md)
 
 ## Timeline Window
