@@ -15,7 +15,7 @@ using Unity.Formats.USD;
 public class TimelinePopup : EditorWindow
 {
 
-    [MenuItem("USD/Previzualization Panels/Timeline Window", priority = 150)]
+    [MenuItem("USD/Previsualization Panels/Timeline Window", priority = 150)]
     public static void TimelineWindow()
     {
         EditorWindow wnd = GetWindow<TimelinePopup>();

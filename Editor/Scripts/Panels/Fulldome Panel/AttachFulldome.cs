@@ -18,7 +18,7 @@ public class AttachFulldome : EditorWindow
     public static DropdownField m_dropDown;
     public static DropdownField m_orientationDropdown;
 
-    [MenuItem("USD/Previzualization Panels/Add Fulldome Camera", priority = 120)]
+    [MenuItem("USD/Previsualization Panels/Add Fulldome Camera", priority = 120)]
     public static void FullDomeView()
     {
         EditorWindow wnd = GetWindow<AttachFulldome>();
