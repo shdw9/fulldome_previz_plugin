@@ -4,7 +4,7 @@
 </p>
 
 # Fulldome Previsualization: Fulldome Addon for Unity USD
-This repository contains the source code for the `Fulldome Previsualization in Unity` plugin made for Jeroen. It is an addon to the [Unity's USD package](https://github.com/Unity-Technologies/usd-unity-sdk) and adds features that would create a fulldome camera to allow users to visualize USD scenes in fulldome in Unity.
+This repository contains the source code for the `Fulldome Previsualization in Unity` plugin. Based on a student project proposal by Jeroen Lapré for the Computer Science Department of San Francisco State University. It is an addon to the [Unity's USD package](https://github.com/Unity-Technologies/usd-unity-sdk) and adds features that would create a fulldome camera to allow users to visualize USD scenes in fulldome in Unity.
 
 ![package manager ss](https://i.imgur.com/FTzFh7l.png)
 
