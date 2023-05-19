@@ -1,6 +1,8 @@
 # Fulldome Previsualiation: Usage Documentation
 For documentation regarding the fulldome camera, see [fulldome docs](https://github.com/shdw9/fulldome_previz_plugin/blob/main/Documentation~/Fulldome.md)
 
+For documentation regarding installation, see [installation docs](https://github.com/shdw9/fulldome_previz_plugin/blob/main/Documentation~/Installation.md)
+
 ## Timeline Window
 The timeline window allows you to create and edit cinematic content, gameplay sequences, audio sequences, and animations
 
