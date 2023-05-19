@@ -18,15 +18,22 @@ public class ExportTimeline : MonoBehaviour
     [MenuItem("USD/Timeline/Export Timeline Information", priority = 190)]
     public static void ExportToJson()
     {
-        if (PrevizPlugin.usdScene == null) {
+        var usdScene = PrevizUtilities.findRootUsd();
+
+        if (usdScene == null) {
             Debug.Log("[PREVIZ] Cannot find the imported USD scene! Try importing a USD scene via \"Import with Timeline Clip\"!");
             return;
         }
 
-        var timeline = (TimelineAsset) PrevizPlugin.usdScene.GetComponent<PlayableDirector>().playableAsset;
-        string timelineJson = "{\"" + PrevizPlugin.usdScene.name + "\": {";
+        if (usdScene.GetComponent<PlayableDirector>() == null) {
+            Debug.Log("[PREVIZ] Cannot find the playable director of this USD scene. Try importing the scene via \"Import with Timeline Clip\"!");
+            return;
+        }
+
+        var timeline = (TimelineAsset) usdScene.GetComponent<PlayableDirector>().playableAsset;
+        string timelineJson = "{\"" + usdScene.name + "\": {";
         
-        timelineJson += "\"usdPath\": \"" + PrevizPlugin.usdScene.GetComponent<Unity.Formats.USD.UsdAsset>().usdFullPath.Replace("\\","/") + "\", ";
+        timelineJson += "\"usdPath\": \"" + usdScene.GetComponent<Unity.Formats.USD.UsdAsset>().usdFullPath.Replace("\\","/") + "\", ";
         foreach (TrackAsset track in timeline.GetOutputTracks())
         {
             timelineJson += "\"" + track.ToString().Split('(', ')')[1] + "\": {";
