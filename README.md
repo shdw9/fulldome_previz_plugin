@@ -10,7 +10,7 @@ This repository contains the source code for the `Fulldome Previsualization in U
 
 ## Documentation
 
-For more documentation about this package, see the [package docs](https://github.com/shdw9/fulldome_previz_plugin/tree/main/Documentation~)
+For more documentation about this package, see the [package docs](https://github.com/shdw9/fulldome_previz_plugin/blob/main/Documentation~/Usage.md)
 
 ## Features
 
