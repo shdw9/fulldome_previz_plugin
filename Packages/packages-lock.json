@@ -1,12 +1,13 @@
 {
   "dependencies": {
-    "com.sfsuprevizteam3b.previzplugin": {
-      "version": "file:PrevizPluginPackage",
+    "com.sfsucsc631team3b.fulldomepreviz": {
+      "version": "file:fulldome-previz-plugin",
       "depth": 0,
       "source": "embedded",
       "dependencies": {
         "com.unity.recorder": "4.0.0",
-        "com.unity.formats.usd": "2.0.0"
+        "com.unity.formats.usd": "2.0.0",
+        "com.unity.nuget.newtonsoft-json": "3.2.1"
       }
     },
     "com.unity.ai.navigation": {
