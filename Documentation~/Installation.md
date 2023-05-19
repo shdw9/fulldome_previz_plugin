@@ -48,3 +48,10 @@ After installing the dependencies stated above, follow the following steps:
 * Navigate to the extracted folder
 * Locate the package.json file
 * Install the package
+
+## Optional Downloads
+
+> Software used to stream from Unity to the dome
+
+- [Spout](http://spout.zeal.co/) (video routing software)
+- [KlakSpout](https://github.com/keijiro/KlakSpout) (Unity plugin for Spout)
