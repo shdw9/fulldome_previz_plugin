@@ -38,6 +38,10 @@ For a more detailed guide, see [installation docs](https://github.com/shdw9/full
 * [Unity USD SDK](https://github.com/Unity-Technologies/usd-unity-sdk) `dev branch`
 * [Newtonsoft Json](https://www.newtonsoft.com/json) `version 3.2.1+`
 
+## License
+
+The `Fulldome Previsualization in Unity` package is licensed under the terms of the MIT license. See [LICENSE](https://github.com/shdw9/fulldome_previz_plugin/blob/main/LICENSE) for more information.
+
 ## Credits
 
 *Made from our standalone version which was discontinued, [fulldome_previz_unity](https://github.com/shdw9/fulldome_previz_unity)*
