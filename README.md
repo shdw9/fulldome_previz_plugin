@@ -5,7 +5,7 @@ This repository contains the source code for the `Fulldome Previsualization in U
 
 ## Documentation
 
-For more documentation about this package, see the [package docs](https://github.com/shdw9/fulldome_previz_plugin/blob/main/Packages/fulldome-previz-plugin/Documentation~)
+For more documentation about this package, see the [package docs](https://github.com/shdw9/fulldome_previz_plugin/tree/main/Documentation~)
 
 ## Features
 
@@ -20,14 +20,14 @@ The following is a brief list of features of this addon:
      * File formats: `.usd, .usda, .usdz`
 * Fulldome Camera Rig
   * Toggle scene cameras to be seen through a fulldome lens
-  * To stream fulldome footage to the dome, see [fulldome docs](https://github.com/shdw9/fulldome_previz_plugin/blob/main/Packages/fulldome-previz-plugin/Documentation~/Fulldome.md)
+  * To stream fulldome footage to the dome, see [fulldome docs](https://github.com/shdw9/fulldome_previz_plugin/tree/main/Documentation~/Fulldome.md)
   * Utilizies Open Source Project: [FulldomeCameraForUnity](https://github.com/rsodre/FulldomeCameraForUnity)
 * Export Timeline Information
   * Save timeline changes to a JSON file
   * Allows you to import that information to different Digital Content Creation tools
 
 ## Dependencies
-For a more detailed guide, see [installation docs](https://github.com/shdw9/fulldome_previz_plugin/blob/main/Packages/fulldome-previz-plugin/Documentation~/Installation.md)
+For a more detailed guide, see [installation docs](https://github.com/shdw9/fulldome_previz_plugin/tree/main/Documentation~/Installation.md)
 
 * [Unity Recorder](https://docs.unity3d.com/Packages/com.unity.recorder@4.0/manual/index.html) `version 4.0.0+`
 * [Unity USD SDK](https://github.com/Unity-Technologies/usd-unity-sdk) `dev branch`
