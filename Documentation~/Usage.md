@@ -15,6 +15,14 @@ The animation window allows you to create and modify animation clips/keyframes i
 To open the Animation Window:
 `USD > Previzualiation Panels > Animation Window`
 
+## Modifying keyframes/animation through Animation Window
+To modify keyframes/animation of an object:
+
+- Navigate to the object in the hierarchy
+- Open the Animation Window and create an Animation Clip
+- Add Property > Transform > Position/Rotation/Scale 
+- To navigate to a specific frame enter the frame number in the input field to the right of the playback controls
+
 ## Importing USD file with Timeline Clip
 This menu option will import USD files with their animation imported as a timeline clip in Unity.
 
