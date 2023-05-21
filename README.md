@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="https://github.com/shdw9/fulldome_previz_plugin/blob/main/Documentation~/images/fulldomeprevisWithText.png" width="400" class="margin-left: auto; margin-right: auto;" />
+  <img src="https://raw.githubusercontent.com/shdw9/fulldome_previz_plugin/main/Documentation%7E/images/fullDomePreviz.png" width="400" class="margin-left: auto; margin-right: auto;" />
 </p>
 
 # Fulldome Previsualization: Fulldome Addon for Unity USD
