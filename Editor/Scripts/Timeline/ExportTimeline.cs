@@ -56,7 +56,12 @@ public class ExportTimeline : MonoBehaviour
         if (path.Length != 0)
         {
             Debug.Log(timelineJson);
-            File.WriteAllText(path, JsonConvert.SerializeObject(JObject.Parse(timelineJson), Formatting.Indented));
+            try {
+                File.WriteAllText(path, JsonConvert.SerializeObject(JObject.Parse(timelineJson), Formatting.Indented));
+            } catch {
+                File.WriteAllText(path, timelineJson);
+            }
+            
             Debug.Log("[PREVIZ] Saved timeline information to " + path + "!");
         }
 

@@ -25,8 +25,8 @@ public class AttachFulldome : EditorWindow
         wnd.titleContent = new GUIContent("[Previz] Fulldome Camera");
 
         // this makes it so that its not resizable
-        wnd.minSize = new Vector2(300,200);
-        wnd.maxSize = new Vector2(300,200);
+        wnd.minSize = new Vector2(300,170);
+        wnd.maxSize = new Vector2(300,170);
 
         wnd.ShowPopup();
     }
@@ -119,6 +119,7 @@ public class AttachFulldome : EditorWindow
             } else {
                 DestroyImmediate(GameObject.Find("Fulldome Camera"));
             }
+            Debug.Log("[PREVIZ] Removed the fulldome camera script from " + m_dropDown.value + "!");
             
         }
 

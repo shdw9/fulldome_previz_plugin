@@ -27,6 +27,9 @@ The following is a brief list of features of this addon:
   * Toggle scene cameras to be seen through a fulldome lens
   * To stream fulldome footage to the dome, see [fulldome docs](https://github.com/shdw9/fulldome_previz_plugin/tree/main/Documentation~/Fulldome.md)
   * Utilizies Open Source Project: [FulldomeCameraForUnity](https://github.com/rsodre/FulldomeCameraForUnity)
+* Camera Movement Script
+  * Control scene cameras with controls in the play scene
+  * Customizable settings *(smoothing, sensitivity, camera speed)*
 * Export Timeline Information
   * Save timeline changes to a JSON file
   * Allows you to import that information to different Digital Content Creation tools

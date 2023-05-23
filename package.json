@@ -1,8 +1,8 @@
 {
   "name": "com.sfsucsc631team3b.fulldomepreviz",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "displayName": "Fulldome Previsualization",
-  "description": "SFSU CSC 631 2023 - Team 3B Fulldome Previsualization Plugin in Unity\n\nThe Fulldome Previsualization Plugin modifies the USD menu to allow you to: \n - Import USD files with animation clips\n - Export USD files with modified animations\n - Add a fulldome camera rig to any specified camera in the scene\n - Export timeline information to a JSON file\n\nUnity Version: Unity.2022.2.9f1",
+  "description": "SFSU CSC 631 2023 - Team 3B Fulldome Previsualization Plugin in Unity\n\nThe Fulldome Previsualization Plugin modifies the USD menu to allow you to: \n\n - Import USD files with animation clips\n - Export USD files with modified animations using Unity Recorder\n - Toggle scene cameras to be seen through a fisheye/fulldome lens\n - Control scene cameras with controls in the play scene\n - Export timeline information to a JSON file\n\nBased on a student project proposal by Jeroen Lapr\u00e9 for the Computer Science Department of San Francisco State University\n\nUnity Version: Unity.2022.2.9f1",
   "unity": "2022.2",
   "unityRelease": "9f1",
   "documentationUrl": "https://github.com/shdw9/fulldome_previz_plugin/",
