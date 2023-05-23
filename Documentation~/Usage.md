@@ -23,6 +23,16 @@ To modify keyframes/animation of an object:
 - Add Property > Transform > Position/Rotation/Scale 
 - To navigate to a specific frame enter the frame number in the input field to the right of the playback controls
 
+## Using Camera Controller Menu 
+![https://i.imgur.com/FbbCYwP.png](https://i.imgur.com/FbbCYwP.png)
+
+To control the camera in the scene in play mode, you can use the camera controller menu to attach the camera controller script
+
+To open the Camera Controller Menu: 
+`USD > Previsualization Panels > Add Camera Controller`
+
+NOTE: If there is a timeline animation clip in the scene, the animation will also play in play mode unless you switch to a different camera and add the script to that. 
+
 ## Importing USD file with Timeline Clip
 This menu option will import USD files with their animation imported as a timeline clip in Unity.
 
